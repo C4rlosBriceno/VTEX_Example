@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>AMBIENTAR VTEX LOCAL</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+
+</head> 
+
+<body>
+    
+    
+    
+    <div class="main-wrapper">
+	    <section class="cta-section theme-bg-light py-5">
+		   
+		</section>
+	    <section class="blog-list px-3 py-5 p-md-5">
+		    <div class="container">
+			    <div class="item mb-5">
+				    <div class="media">
+					     <div class="container text-center">
+			    <h2 class="heading">PASOS PARA INICAR APLICATIVO VTEX</h2>
+			</div><!--//media-->
+		</div><!--//item-->
+		    </div>
+		</section>
+		<section>
+			<td class="d-block comment-body markdown-body  js-comment-body">
+				<h1>Configuraciones básicas</h1>
+				<h2>Introducción</h2>
+				<p>Antes de comenzar a poner manos a la obra y aprender más sobre el Store Framework de VTEX IO, usted debe realizar algunas configuraciones básicas, como:</p>
+				<ul>
+				<li>Instalar <strong>Git</strong>.</li>
+				<li>Instalar <strong>Toolbelt</strong>.</li>
+				<li>Hacer <strong>login</strong> en una cuenta VTEX.</li>
+				<li>Crear un <strong>workspace</strong> de desarrollo.</li>
+				<li><strong>Enlazar</strong> sus archivos locales con la plataforma.</li>
+				</ul>
+				<p>A continuación, consulte el procedimiento para cada una de estas configuraciones:</p>
+				<h2>Instalando Git</h2>
+				<p>Instale Git en su computadora accediendo al siguiente enlace y seleccionando el software usado por su computadora (Windows, MAC o Linux):</p>
+				<p><a rel="nofollow" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+
+				<h2>Instalando Toolbelt</h2>
+				<p><strong>Toolbelt</strong> es la herramienta de <strong>línea de comando</strong> de VTEX IO. Este le permite realizar cualquier actividad en la plataforma, como crear un nuevo  workspace de desarrollo, iniciar sesión en una cuenta VTEX, desarrollar nuevas  apps, gestionar las ya existentes, etc.</p>
+				<p>Dado que Toolbelt es el que establece la comunicación entre el desarrollador y la  plataforma, usted lo necesitará para lograr realizar todas las actividades  propuestas durante el curso de Store Framework.</p>
+				<ol>
+				<li>Instale <a href="https://nodejs.org/" rel="nofollow"><strong>Node.js</strong></a>. Si la computadora que usted está usando es MAC, instale también <a href="https://yarnpkg.com/" rel="nofollow"><strong>Yarn</strong></a>.</li>
+				<li>Ejecute el comando <code>npm i -g vtex</code> en su terminal si usted  está trabajando de un Windows y <code>yarn global add vtex</code> en  MAC.</li>
+				</ol>
+				<p>Usted puede ejecutar el comando <code>vtex-v</code> (Windows) o <code>vtex</code> (MAC) para confirmar si la instalación de Toolbelt ocurrió como se esperaba.</p>
+				<p>Con la instalación concluida, su próximo paso debe ser <em>iniciar sesión</em> en una cuenta VTEX.</p>
+
+				<h2>Descargando Fuentes</h2>
+				 <p>Para poder generar algun cambio en la plataforma y poder visualizar las modificaciones realizadas, primero debemos descargar las fuentes correspondientes al aplicativo en la cual queremos trabajar. </p>
+				 <p>En este caso trabajaremos en <strong>Telemercados2dev</strong> ya que es un ambiente Desarrollo para iniciar los requerimientos.Seguir los siguientes pasos para decargar <strong>Telemercados2devs:</strong></p>
+				 <ol>
+					<li>
+					<p>Abra la consola CMD e ingrese a la ruta de <strong>Github</strong> y ejecute el comando <code>git clone https://github.com/smu-chile/telemercados-io.git </code> darle enter para clonar el respositorio.</p>
+					</li>
+					<li>
+					<p>Una vez que haya terminado podrar ver el las fuentes de la pagina.</p>
+					</li>
+					</ol>
+				<h2>Iniciando sesión</h2>
+				<ol>
+				<li>
+				<p>Ejecute el comando <code>vtex login contaVTEX</code> en su terminal, reemplazando <code>contaVTEX</code> con el nombre real de la cuenta en la que desea trabajar. Por ejemplo, <code>vtex login appliancetheme</code> .</p>
+				</li>
+				<li>
+				<p>Una vez que haya <em>iniciado sesión</em>, ejecute el comando <code>vtex whoami</code> para confirmar en qué cuenta y workspace usted está.</p>
+				</li>
+				</ol>
+				<p>Workspaces no son más que espacios de trabajo. En la plataforma VTEX IO, las cuentas tienen tres tipos principales de workspaces: <a href="https://vtex.io/docs/recipes/store/promoting-a-workspace-to-master" rel="nofollow">master</a>, de <a href="https://vtex.io/docs/recipes/store/creating-a-production-workspace" rel="nofollow">producción</a> y desarrollo.</p>
+				<p>El siguiente paso hará que se cree un workspace de desarrollo para usted, permitiendo que las configuraciones realizadas en las actividades del curso no cambien la versión pública final de la tienda.</p>
+				<h2>Creando un workspace de desarrollo</h2>
+				<ol>
+				<li>Ejecute <code>vtex use nome-do-workspace</code>, reemplazando  <code>nome-do-workspace</code> con el nombre deseado. Por ejemplo, <code>vtex use devworkspace</code> .</li>
+				</ol>
+				<h3>Visualizando su workspace</h3>
+				<p>Una vez creado su workspace, podrá acceder a este desde el enlace <code>https://{workspace}--{cuenta}.myvtex.com</code>, reemplazando <code>{workspace}</code> y <code>{cuenta}</code> con el workspace creado anteriormente y el nombre de la cuenta, respectivamente. Por ejemplo, <code>https://devworkspace--appliancetheme.myvtex.com</code></p>
+				<h2>Enlazando sus archivos locales</h2>
+				<p>Al ejecutar <code>vtex link</code> a partir de la carpeta donde están los archivos de su tema, estos pasarán a ser automáticamente sincronizados con la plataforma de VTEX IO. Esto significa que cualquier alteración que usted haya realizado y guardado será reflejada en el workspace y en la cuenta en que usted esté  <em>conectado</em>, y podrá visualizarse a través de la dirección descrita anteriormente.</p>
+				<hr>
+				
+				<hr>
+
+			</td>
+		</section>
+		<br>
+		<br>
+		<br>
+			<!--
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/blog-post-thumb-2.jpg" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="blog-post.html">A Guide to Becoming a Full-Stack Developer</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 3 months ago</span><span class="time">3 min read</span><span class="comment"><a href="#">26 comments</a></span></div>
+						    <div class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...</div>
+						    <a class="more-link" href="blog-post.html">Read more &rarr;</a>
+					    </div>
+				    </div>
+			    </div>
+			    
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/blog-post-thumb-3.jpg" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="blog-post.html">High Performance JavaScript</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 1 month ago</span><span class="time">8 min read</span><span class="comment"><a href="#">12 comments</a></span></div>
+						    <div class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...</div>
+						    <a class="more-link" href="blog-post.html">Read more &rarr;</a>
+					    </div>
+				    </div>
+			    </div>
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/blog-post-thumb-4.jpg" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="blog-post.html">Top 5 JavaScript Frameworks</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 2 months ago</span><span class="time">15 min read</span><span class="comment"><a href="#">3 comments</a></span></div>
+						    <div class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...</div>
+						    <a class="more-link" href="blog-post.html">Read more &rarr;</a>
+					    </div>
+				    </div>
+			    </div>
+			    
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/blog-post-thumb-5.jpg" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="blog-post.html">Learn React in 24 Hours</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 2 months ago</span><span class="time">10 min read</span><span class="comment"><a href="#">23 comments</a></span></div>
+						    <div class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...</div>
+						    <a class="more-link" href="blog-post.html">Read more &rarr;</a>
+					    </div>
+				    </div>
+			    </div>
+			    
+			    <div class="item">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/blog-post-thumb-6.jpg" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="blog-post.html">About Remote Working</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 3 months ago</span><span class="time">2 min read</span><span class="comment"><a href="#">1 comment</a></span></div>
+						    <div class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...</div>
+						    <a class="more-link" href="blog-post.html">Read more &rarr;</a>
+					    </div>
+				    </div>
+			    </div>
+			    
+			    
+				
+		    </div>
+	    </section>
+	    -->
+	    <footer class="footer text-center py-2 theme-bg-dark">
+		   
+	        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+                
+		   
+	    </footer>
+    
+    </div><!--//main-wrapper-->
+    
+    
+    
+
+
+    
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+    <script src="assets/js/demo/style-switcher.js"></script>     
+    
+
+</body>
+</html> 
+
