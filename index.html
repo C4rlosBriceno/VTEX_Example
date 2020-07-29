@@ -75,10 +75,23 @@
 					<p>Una vez que haya terminado podrar ver el las fuentes de la pagina.</p>
 					</li>
 					</ol>
+				<h3>Creando Rama Desarrollo</h3>
+				<p> Crear una nueva rama <strong>"Renegados"</strong> y mostrar las ramas del repositorio:</p>
+				<ol>
+					<li>
+					<p>Abra la consola CMD e ingrese a la ruta de <strong>Github</strong> y ejecute el comando <code>git branch renegados </code> .</p>
+					</li>
+					<li>
+					<p>Ejecute <code>git branch </code> para lista las ramas del repositorio</p>
+					</li>
+					<li>
+					<p>Ejecute <code>git checkout renegados </code> para cambiar a la rama creada</p>
+					</li>
+				</ol>
 				<h2>Iniciando sesión</h2>
 				<ol>
 				<li>
-				<p>Ejecute el comando <code>vtex login contaVTEX</code> en su terminal, reemplazando <code>contaVTEX</code> con el nombre real de la cuenta en la que desea trabajar. Por ejemplo, <code>vtex login appliancetheme</code> .</p>
+				<p>Ejecute el comando <code>vtex login contaVTEX</code> en su terminal, reemplazando <code>contaVTEX</code> con el nombre real de la cuenta en la que desea trabajar. Por ejemplo, <code>vtex login telmercados2dev</code> .</p>
 				</li>
 				<li>
 				<p>Una vez que haya <em>iniciado sesión</em>, ejecute el comando <code>vtex whoami</code> para confirmar en qué cuenta y workspace usted está.</p>
@@ -88,15 +101,51 @@
 				<p>El siguiente paso hará que se cree un workspace de desarrollo para usted, permitiendo que las configuraciones realizadas en las actividades del curso no cambien la versión pública final de la tienda.</p>
 				<h2>Creando un workspace de desarrollo</h2>
 				<ol>
-				<li>Ejecute <code>vtex use nome-do-workspace</code>, reemplazando  <code>nome-do-workspace</code> con el nombre deseado. Por ejemplo, <code>vtex use devworkspace</code> .</li>
+				<li>Ejecute <code>vtex use nome-do-workspace</code>, reemplazando  <code>nome-do-workspace</code> con el nombre deseado. Por ejemplo, <code>vtex use renegados</code> .</li>
 				</ol>
 				<h3>Visualizando su workspace</h3>
-				<p>Una vez creado su workspace, podrá acceder a este desde el enlace <code>https://{workspace}--{cuenta}.myvtex.com</code>, reemplazando <code>{workspace}</code> y <code>{cuenta}</code> con el workspace creado anteriormente y el nombre de la cuenta, respectivamente. Por ejemplo, <code>https://devworkspace--appliancetheme.myvtex.com</code></p>
+				<p>Una vez creado su workspace, podrá acceder a este desde el enlace <code>https://{workspace}--{cuenta}.myvtex.com</code>, reemplazando <code>{workspace}</code> y <code>{cuenta}</code> con el workspace creado anteriormente y el nombre de la cuenta, respectivamente. Por ejemplo, <code><a href="https://renegados--telemercados2dev.myvtex.com/">//renegados--telemercados2dev.myvtex.com</a></code></p>
 				<h2>Enlazando sus archivos locales</h2>
-				<p>Al ejecutar <code>vtex link</code> a partir de la carpeta donde están los archivos de su tema, estos pasarán a ser automáticamente sincronizados con la plataforma de VTEX IO. Esto significa que cualquier alteración que usted haya realizado y guardado será reflejada en el workspace y en la cuenta en que usted esté  <em>conectado</em>, y podrá visualizarse a través de la dirección descrita anteriormente.</p>
-				<hr>
-				
-				<hr>
+				<p>Al ejecutar <code>vtex link</code> a partir de la carpeta donde están los archivos de su tema (en este caso es : "\GitHub\telemercados-io\store-theme" ), estos pasarán a ser automáticamente sincronizados con la plataforma de VTEX IO. Esto significa que cualquier alteración que usted haya realizado y guardado será reflejada en el workspace y en la cuenta en que usted esté  <em>conectado</em>, y podrá visualizarse a través de la dirección descrita anteriormente.</p>
+
+				<h3>Creando Rama y realizando Merge</h3>
+				<p> Una vez haya realizado modificaciones en la rama  <strong>"Renegados"</strong> creamos una nueva para traer los cambios hacia esta nueva rama .</p>
+				<ol>
+					<li>
+					<p>Abra la consola CMD e ingrese a la ruta de <strong>Github</strong> y ejecute el comando <code>git branch pruebaMerge </code> .</p>
+					</li>
+					<li>
+					<p>Ejecute <code>git branch </code> para lista las ramas del repositorio</p>
+					</li>
+					<li>
+					<p>Ejecute <code>git checkout pruebaMerge </code> para cambiar a la rama creada</p>
+					</li>
+					<li>
+					<p>Ejecute <code>git merge pruebaMerge </code> para traer los cambios de la rama "Renegados" hacia "Prueba Merge".</p>
+					</li>
+				</ol>
+
+				<h1>¿Que es tachyons? </h3>
+				<p> Puede clasificarse principalmente como herramienta "Front-End Frameworks" .Tachyons proporciona interfaces  de manera rapida , sencilla y accesible. :</p>
+				<ol>
+					<li>
+						<p>Arquitectura css móvil primero</p>
+					</li>
+					<li>
+						<p>490 combinaciones de colores accesibles</p>
+					</li>
+					<li>
+						<p>	Cuadrícula de referencia de 8px </p>
+					</li>
+					<li>
+						<p>	Tachyons está diseñado para ser editado y personalizado para satisfacer las necesidades de su proyecto. Es solo CSS. No es precioso No tenga miedo de cambiar: nombres de clase, consultas de medios, puntos de interrupción o valores.</p>
+					</li>
+					<li>
+						<p>	Las clases base son móviles por defecto. Puede ser anulado por clases de espacios de nombres que apuntan a puntos de interrupción más grandes.</p>
+					</li>
+				<p>link oficial <code><a href="https://tachyons.io/">https://tachyons.io/</a></code></p>	
+					
+				</ol>
 
 			</td>
 		</section>
